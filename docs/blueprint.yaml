@@ -23,7 +23,7 @@ user_stories:
       - description: ""
         completed: false
     component_ids:
-      - NC4
+      - NC6
     column_id: COL2
   - id: US3
     as: role
@@ -36,6 +36,36 @@ user_stories:
       - NC6
       - NC5
     column_id: COL1
+  - id: US4
+    as: role
+    want: goal
+    so_that: benefit
+    acceptance_criteria:
+      - description: ""
+        completed: false
+    component_ids:
+      - NC6
+    column_id: COL2
+  - id: US5
+    as: role
+    want: goal
+    so_that: benefit
+    acceptance_criteria:
+      - description: ""
+        completed: false
+    component_ids:
+      - NC6
+    column_id: COL2
+  - id: US6
+    as: role
+    want: goal
+    so_that: benefit
+    acceptance_criteria:
+      - description: ""
+        completed: false
+    component_ids:
+      - NC6
+    column_id: COL1
 architecture:
   components:
     - id: NC
@@ -47,21 +77,21 @@ architecture:
           role: ui
           children: []
       layout:
-        x: -243.09256088115438
-        y: -13.783598812848965
+        x: -154.8151414391248
+        y: 5.667358013360939
     - id: NC2
       name: New Component
       role: frontend
       children: []
       layout:
-        x: 629.5253632554565
-        y: 46.36301418867376
+        x: 753.7122414535658
+        y: 32.89696715514384
     - id: NC3
       name: New Component
       role: frontend
       children:
         - id: NC5
-          name: New Child
+          name: auth
           role: ui
           children: []
         - id: NC6
@@ -73,8 +103,8 @@ architecture:
           role: ui
           children: []
       layout:
-        x: 185.4520567546951
-        y: 16.78877993270973
+        x: 281.21061343757464
+        y: -13.135769030690142
   edges:
     - source: A
       target: NC6
@@ -88,7 +118,34 @@ architecture:
     - source: NC4
       target: NC6
       type: reads
-stages: []
+stages:
+  - id: 1
+    name: New Stage
+    user_story_ids:
+      - US1
+      - US2
+    component_ids: []
+    stage_gates:
+      - description: ""
+        completed: false
+  - id: 2
+    name: New Stage
+    user_story_ids:
+      - US5
+      - US3
+      - US6
+    component_ids: []
+    stage_gates: []
+  - id: 3
+    name: New Stage
+    user_story_ids: []
+    component_ids: []
+    stage_gates: []
+  - id: 4
+    name: New Stage
+    user_story_ids: []
+    component_ids: []
+    stage_gates: []
 columns:
   - id: COL1
     title: Stories
