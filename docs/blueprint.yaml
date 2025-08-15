@@ -46,10 +46,16 @@ architecture:
           name: New Child
           role: ui
           children: []
+      layout:
+        x: -243.09256088115438
+        y: -13.783598812848965
     - id: NC2
       name: New Component
       role: frontend
       children: []
+      layout:
+        x: 629.5253632554565
+        y: 46.36301418867376
     - id: NC3
       name: New Component
       role: frontend
@@ -66,6 +72,9 @@ architecture:
           name: authService
           role: ui
           children: []
+      layout:
+        x: 185.4520567546951
+        y: 16.78877993270973
   edges:
     - source: A
       target: NC6
