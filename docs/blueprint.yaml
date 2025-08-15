@@ -11,16 +11,82 @@ user_stories:
     acceptance_criteria:
       - description: ""
         completed: false
-    component_ids: []
+    component_ids:
+      - NC6
+      - A
+    column_id: COL1
+  - id: US2
+    as: role
+    want: goal
+    so_that: benefit
+    acceptance_criteria:
+      - description: ""
+        completed: false
+    component_ids:
+      - NC4
+    column_id: COL2
+  - id: US3
+    as: role
+    want: goal
+    so_that: benefit
+    acceptance_criteria:
+      - description: ""
+        completed: false
+    component_ids:
+      - NC6
+      - NC5
     column_id: COL1
 architecture:
-  components: []
-  edges: []
+  components:
+    - id: NC
+      name: New Component
+      role: frontend
+      children:
+        - id: NC4
+          name: New Child
+          role: ui
+          children: []
+    - id: NC2
+      name: New Component
+      role: frontend
+      children: []
+    - id: NC3
+      name: New Component
+      role: frontend
+      children:
+        - id: NC5
+          name: New Child
+          role: ui
+          children: []
+        - id: NC6
+          name: New Child
+          role: ui
+          children: []
+        - id: A
+          name: authService
+          role: ui
+          children: []
+  edges:
+    - source: A
+      target: NC6
+      type: calls
+    - source: NC4
+      target: NC5
+      type: reads
+    - source: NC4
+      target: NC5
+      type: reads
+    - source: NC4
+      target: NC6
+      type: reads
 stages: []
 columns:
   - id: COL1
     title: Stories
     order: 0
+  - id: COL2
+    title: New Column
+    order: 1
 prompt_style:
   tone: kid-friendly
   detail_level: step-by-step
