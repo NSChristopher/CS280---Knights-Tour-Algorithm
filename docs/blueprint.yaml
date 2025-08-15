@@ -1,12 +1,26 @@
-version: "0.2"
+version: "0.3"
 project:
   name: Untitled App
   mission: Draft mission (edit in Overview).
   audience: Who is this for?
-user_stories: []
+user_stories:
+  - id: US1
+    as: role
+    want: goal
+    so_that: benefit
+    acceptance_criteria:
+      - description: ""
+        completed: false
+    component_ids: []
+    column_id: COL1
 architecture:
   components: []
+  edges: []
 stages: []
+columns:
+  - id: COL1
+    title: Stories
+    order: 0
 prompt_style:
   tone: kid-friendly
   detail_level: step-by-step
